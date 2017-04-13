@@ -1,5 +1,6 @@
 # unicode2utf8
-**python代码展示unicode用utf8编码过程**
+**python代码展示unicode用utf8编码过程**  
+**BUT! 这个不能用来做unicode的utf-8编码\!**
 
 ### 编码规则
 |     Unicode           | UTF-8                               |
@@ -24,6 +25,7 @@ print repr(u"你")    # u'\u4f60'
 | 1 1 1 0 x x x x  | 1 0 x x x x x x  | 1 0 x x x x x x |
 | 1 1 1 0 0 1 0 0  | 1 0 1 1 1 1 0 1  | 1 0 1 0 0 0 0 0 |
 | E4               | BD               | A0              |
+_part-1 100填入1110xxxx不够的位，用0填补_
 
 **最后看一下结果**
 ```python
